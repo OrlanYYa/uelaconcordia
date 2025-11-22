@@ -1,25 +1,25 @@
 // 1. Array con los datos de las imágenes
 const carouselImages = [
-    { src: "../../imagenes/imagenescarrusel/Autoridad principal.jpg" },
+    { src: "../imagenes/imagenescarrusel/Autoridad principal.jpg" },
     //Colaboraciones
-    { src: "../../imagenes/imagenescarrusel/Colaboraciones.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Colaboraciones1.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Colaboraciones2.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Colaboraciones3.jpg" },
+    { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
+    { src: "../imagenes/imagenescarrusel/Colaboraciones1.jpg" },
+    { src: "../imagenes/imagenescarrusel/Colaboraciones2.jpg" },
+    { src: "../imagenes/imagenescarrusel/Colaboraciones3.jpg" },
     //Estudiantes
-    { src: "../../imagenes/imagenescarrusel/Estudiantes.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Estudiantes1.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Estudiantes2.jfif" },
+    { src: "../imagenes/imagenescarrusel/Estudiantes.jpg" },
+    { src: "../imagenes/imagenescarrusel/Estudiantes1.jpg" },
+    { src: "../imagenes/imagenescarrusel/Estudiantes2.jfif" },
     //Eventos
-    { src: "../../imagenes/imagenescarrusel/Eventos.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Eventos1.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Eventos2.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Eventos3.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Eventos4.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Eventos5.jpg" },
+    { src: "../imagenes/imagenescarrusel/Eventos.jpg" },
+    { src: "../imagenes/imagenescarrusel/Eventos1.jpg" },
+    { src: "../imagenes/imagenescarrusel/Eventos2.jpg" },
+    { src: "../imagenes/imagenescarrusel/Eventos3.jpg" },
+    { src: "../imagenes/imagenescarrusel/Eventos4.jpg" },
+    { src: "../imagenes/imagenescarrusel/Eventos5.jpg" },
     //Docentes
-    { src: "../../imagenes/imagenescarrusel/Profesoras.jpg" },
-    { src: "../../imagenes/imagenescarrusel/Profesores.jpg" },
+    { src: "../imagenes/imagenescarrusel/Profesoras.jpg" },
+    { src: "../imagenes/imagenescarrusel/Profesores.jpg" },
 ];
 
 // 2. Función para generar el HTML de las diapositivas
