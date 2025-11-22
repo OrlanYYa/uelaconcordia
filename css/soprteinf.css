@@ -1,0 +1,214 @@
+/* Importar la paleta de colores suaves */
+@import "paleta-suave.css";
+
+/* --- 1. Paleta de Colores y Tipografía --- */
+body {
+    font-family: 'Verdana', 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Usar la variable de color principal para el texto */
+    color: var(--text);
+
+    /* --- PROPIEDADES DE IMAGEN DE FONDO (Fondo suave) --- */
+    background-image: url('https://www.lahora.com.ec/__export/1742396218026/sites/lahora/img/2025/03/19/20250319_085655660_Anuncios_inesperadosx_cambian_rectores_en_centros_educativos.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* Usamos el color de fondo suave */
+    background-color: var(--bg);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* --- 2. Encabezado Vibrante y Animación --- */
+header {
+    /* Usar el color primario para el fondo del header */
+    background: var(--primary);
+    color: var(--text-inverse);
+    /* Color inverso para el texto */
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    /* Sombra media */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 3px;
+    transition: text-shadow 0.5s ease;
+}
+
+header h1:hover {
+    /* Usar un color de enfoque para el hover */
+    text-shadow: 0 0 15px var(--text-inverse), 0 0 5px var(--primary);
+}
+
+/* --- 3. Reglas Generales de Tipografía y Iconografía --- */
+h2 {
+    /* Usar el color primario para los títulos */
+    color: var(--primary);
+    /* Usar el color de acento o warning para la línea de abajo */
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: var(--primary-dark);
+    /* Color primario oscuro para el hover */
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* --- 4. Regla IMG Centrada y responsive --- */
+img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: var(--radius);
+    /* Usar variable para el radio */
+    box-shadow: var(--shadow-sm);
+    /* Sombra más sutil */
+    transition: transform 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* --- 5. Diseño de Secciones (Cards) --- */
+section {
+    padding: 35px;
+    margin-bottom: 30px;
+    /* Fondo de sección: surface con ligera transparencia */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    /* Radio grande para un look suave */
+    box-shadow: var(--shadow-md);
+    /* Sombra media */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid var(--border-light);
+    /* Borde sutil */
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    /* Sombra grande al hacer hover */
+}
+
+/* --- 6. Listas de Puntos (Legibilidad) --- */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    /* Usar bg-secondary para el fondo de la lista */
+    background-color: var(--bg-secondary);
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    /* Usar el color primario para la barra lateral */
+    border-left: 8px solid var(--primary);
+    border-radius: var(--radius-sm);
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    /* Usar primary-light para el cambio de color al pasar el mouse */
+    background-color: var(--primary-light);
+}
+
+li strong {
+    /* Usar el color primario para el texto fuerte */
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* --- 7. Estilos para la sección de CTA --- */
+.cta {
+    text-align: center;
+    /* Usar color de acento/warning para el CTA */
+    background: var(--warning);
+    color: var(--text);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    margin-top: 30px;
+}
+
+.cta h2 {
+    color: var(--text);
+    /* Texto principal para el título del CTA */
+    border-bottom: none;
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+.cta button {
+    /* Usar color de error/peligro para el botón de llamada a la acción (rojo/naranja) */
+    background-color: var(--error);
+    color: var(--text-inverse);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta button:hover {
+    /* Usar un color más oscuro para el hover del botón */
+    background-color: #c9300e;
+    /* Un rojo más oscuro que F44336 */
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text);
+    margin-top: 30px;
+}
+
+/* --- 8. Adaptación Móvil Sencilla --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* --- 9. Animaciones CSS3 --- */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
