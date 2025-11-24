@@ -2,8 +2,9 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/html/Lobby/Lobby.html"
+      "destination": "/html/Lobby.html"
       
     }
   ]
+
 }
