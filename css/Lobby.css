@@ -346,8 +346,8 @@ header p {
 .facility-card img {
     width: 100%;
     height: 250px;
+    gap: 16px;
     object-fit: cover;
-    display: block;
 }
 
 .facility-info {
@@ -508,6 +508,17 @@ li text{
     margin: 0 auto;
 }
 
+/* Estilos específicos para el IFRAME del mapa */
+.mapa-escuela {
+    width: 100%; /* El mapa ocupa todo el ancho del contenedor */
+    height: 450px; /* Alto del mapa */
+    border: none;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra más pronunciada */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
 .contact-info h3,
 .contact-form h3 {
     font-size: 20px;
@@ -533,13 +544,14 @@ li text{
     font-size: 15px;
     color: var(--muted);
     margin: 0;
-    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 70%;
 }
 
 .contact-form input,
@@ -552,6 +564,7 @@ li text{
     color: var(--text);
     background: var(--surface);
     transition: border-color 0.3s ease;
+    resize: none;
 }
 
 .contact-form input:focus,
