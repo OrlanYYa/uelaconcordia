@@ -21,19 +21,6 @@ body {
     padding: 0 15px;
 }
 
-/* --- 2. Encabezado Vibrante y Animación --- */
-header {
-    /* Usar el color primario para el fondo del header */
-    background: var(--primary);
-    color: var(--text-inverse);
-    /* Color inverso para el texto */
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    /* Sombra media */
-    margin-bottom: 30px;
-}
-
 header h1 {
     margin: 0;
     font-size: 3em;
