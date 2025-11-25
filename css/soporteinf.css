@@ -31,7 +31,6 @@ header h1 {
 /* Hero: diseño consistente con Gestión Financiera */
 .hero {
     height: 100vh;
-    background-image: url('../imagenes/PaginaC2.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -44,8 +43,11 @@ header h1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(20, 20, 40, 0.55);
-    backdrop-filter: blur(4px);
+    background: rgba(10, 10, 20, 0.45);
+    /* quitar blur para evitar que el overlay afecte la legibilidad si se solapa */
+    backdrop-filter: none;
+    z-index: 1;
+    pointer-events: none; /* permitir clicks en el contenido encima */
 }
 
 .hero-content {
@@ -53,6 +55,21 @@ header h1 {
     text-align: center;
     color: white;
     animation: fadeUp 1.5s ease;
+    z-index: 3;
+}
+
+/* Video de fondo para el hero */
+.hero-video,
+#hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+    filter: brightness(0.85);
 }
 
 .title {
@@ -65,7 +82,10 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 10px rgba(107, 138, 196, 0.5));
+    filter: drop-shadow(0 0 12px rgba(0,0,0,0.55));
+    /* Añadir color sólido como fallback para mejorar contraste */
+    color: rgba(255,255,255,0.96);
+    -webkit-text-fill-color: rgba(255,255,255,0.96);
 }
 
 .subtitle {
