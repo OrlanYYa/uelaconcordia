@@ -42,7 +42,6 @@ li {
 }
 
 .title {
-    font-size: 100%;
     letter-spacing: 3px;
     text-shadow: 0 0 20px #e1ebf3e8;
     animation: glow 3s infinite alternate ease-in-out;
