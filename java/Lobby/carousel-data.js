@@ -4,7 +4,7 @@ const carouselImages = [
     //Colaboraciones
     { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
     { src: "../imagenes/imagenescarrusel/Colaboraciones1.jpg" },
-    { src: "../imagenes/imagenescarrusel/Colaboraciones2.jpg" },
+    { src: "../imagenes/imagenescarrusel/colaboraciones2.jpg" },
     { src: "../imagenes/imagenescarrusel/Colaboraciones3.jpg" },
     //Estudiantes
     { src: "../imagenes/imagenescarrusel/Estudiantes.jpg" },
@@ -81,4 +81,5 @@ function generateSlides() {
         spaceBetween: 30,
         },
     },
+
 });
