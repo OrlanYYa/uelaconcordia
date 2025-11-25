@@ -10,13 +10,15 @@ body {
     color: var(--text);
     /* Usamos el color de fondo suave */
     background-color: var(--bg);
-    
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 30px auto;
     padding: 0 15px;
 }
@@ -37,6 +39,10 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .overlay {
@@ -48,6 +54,10 @@ header h1 {
     backdrop-filter: none;
     z-index: 1;
     pointer-events: none; /* permitir clicks en el contenido encima */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .hero-content {
@@ -56,6 +66,9 @@ header h1 {
     color: white;
     animation: fadeUp 1.5s ease;
     z-index: 3;
+    max-width: 95vw;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 /* Video de fondo para el hero */
@@ -70,6 +83,10 @@ header h1 {
     z-index: 0;
     pointer-events: none;
     filter: brightness(0.85);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .title {
@@ -86,15 +103,14 @@ header h1 {
     /* Añadir color sólido como fallback para mejorar contraste */
     color: rgba(255,255,255,0.96);
     -webkit-text-fill-color: rgba(255,255,255,0.96);
-}
-
-.subtitle {
-    font-size: 1.6rem;
-    opacity: 0.9;
-    margin-top: -10px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    white-space: normal;
+    display: block;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 header h1:hover {
@@ -144,6 +160,11 @@ img:hover {
 
 /* --- 5. Diseño de Secciones (Cards) --- */
 section {
+    color: var(--text-muted);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     padding: 35px;
     margin-bottom: 30px;
     /* Fondo de sección: surface con ligera transparencia */
@@ -155,6 +176,10 @@ section {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: 1px solid var(--border-light);
     /* Borde sutil */
+}
+
+b {
+    color: var(--text);
 }
 
 section:hover {
@@ -186,48 +211,17 @@ li:hover {
     background-color: var(--primary-light);
 }
 
+/* Excepción: no aplicar estilos li/ul/a al footer */
+.footer-section ul,
+.footer-section li,
+.footer-section a {
+    all: revert;
+}
+
 li strong {
     /* Usar el color primario para el texto fuerte */
     color: var(--primary);
     font-weight: 700;
-}
-
-/* --- 7. Estilos para la sección de CTA --- */
-.cta {
-    text-align: center;
-    /* Usar color de acento/warning para el CTA */
-    background: var(--warning);
-    color: var(--text);
-    padding: 40px;
-    border-radius: var(--radius-lg);
-    margin-top: 30px;
-}
-
-.cta h2 {
-    color: var(--text);
-    /* Texto principal para el título del CTA */
-    border-bottom: none;
-    margin-bottom: 15px;
-    animation: pulse 1.5s infinite;
-}
-
-.cta button {
-    /* Usar color de error/peligro para el botón de llamada a la acción (rojo/naranja) */
-    background-color: var(--error);
-    color: var(--text-inverse);
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta button:hover {
-    /* Usar un color más oscuro para el hover del botón */
-    background-color: #c9300e;
-    /* Un rojo más oscuro que F44336 */
-    transform: scale(1.05);
 }
 
 /* Botón reutilizable similar a Gestión Financiera */
@@ -269,37 +263,247 @@ li strong {
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
-footer {
-    background: var(--primary-dark);
-    text-align: center;
-    padding: 20px 0;
-    color: var(--text-inverse);
-    margin-top: 30px;
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--primary) 0%, #5A7BB0 100%);
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 60px;
+    padding: 50px 20px 30px;
 }
 
-/* --- 8. Adaptación Móvil Sencilla --- */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
 @media (max-width:768px) {
-    body { padding: 20px }
+    body { 
+        padding: 0;
+        overflow-x: hidden;
+    }
 
-    .header-content { flex-direction: column; text-align: center; gap: 16px; }
+    .hero {
+        height: 100vh;
+        padding: 0;
+        overflow: hidden;
+    }
 
-    .header-logo{ width: 80px; }
+    .hero-content {
+        padding: 0 10px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-    .header-text { text-align: center; }
+    .title {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+        text-shadow: 0 0 8px rgba(0,0,0,0.5);
+        padding: 0 10px;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
 
-    header h1 { font-size: 20px }
+    .header-content { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 16px; 
+    }
 
-    header p { font-size: 14px; }
+    .header-logo{ 
+        width: 80px; 
+    }
 
-    .header-logo { width: 80px; }
-    .carousel-container { margin: 0; height: auto; width: auto; }
+    .header-text { 
+        text-align: center; 
+    }
 
-    .container { width: 95%; }
+    header h1 { 
+        font-size: 20px;
+    }
+
+    header p { 
+        font-size: 14px; 
+    }
+
+    .carousel-container { 
+        margin: 0; 
+        height: auto; 
+        width: auto; 
+    }
+
+    .container { 
+        width: 95%; 
+    }
+
+    section {
+        width: 80%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        padding-bottom: 8px;
+    }
+
+    .icon {
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+        border-left: 6px solid var(--primary);
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 15px auto;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+
+    .footer-section h4 {
+        font-size: 15px;
+    }
+
+    .footer-section ul li a {
+        font-size: 13px;
+    }
 
     /* Ajustes adicionales para secciones y galerías */
-    .gallery-card { max-width: 100%; }
-    .gallery { gap: 12px; padding: 10px 0; }
-    section { padding: 20px; }
+    .gallery-card { 
+        max-width: 100%; 
+    }
+    .gallery { 
+        gap: 12px; 
+        padding: 10px 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .hero {
+        height: 100vh;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        padding: 0 8px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        line-height: 1.15;
+        text-shadow: 0 0 6px rgba(0,0,0,0.5);
+        padding: 0 8px;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        width: 80%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 15px auto;
+        box-sizing: border-box;
+    }
+
+    ul li {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        width: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 /* --- 9. Animaciones CSS3 --- */

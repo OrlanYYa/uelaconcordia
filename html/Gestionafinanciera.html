@@ -12,18 +12,22 @@
 <body>
 
     <div class="hero">
+        <video autoplay muted loop playsinline class="hero-video" id="hero-video">
+            <source src="../imagenes/GestionA.mp4" type="video/mp4">
+            TU NAVEGADOR NO SOPORTA LA ETIQUETA DE VIDEO.
+        </video>
         <div class="overlay"></div>
         <div class="hero-content">
-            <h2 class="subtitle">FIGURA PROFESIONAL</h2>
-            <h1 class="title">GESTIÓN FINANCIERA Y CONTABLE</h1>
+            <h1 class="title">FIGURA PROFESIONAL <br> GESTIÓN FINANCIERA Y CONTABLE</h1>
 
             <a href="../html/Lobby.html" class="btn">IR AL LOBBY</a>
         </div>
     </div>
 
+    <!-- Introducción -->
     <section class="section fade">
         <div class="card">
-            <h3>LA FIGURA PROFESIONAL DE GESTIÓN FINANCIERA Y CONTABLE 📊</h3>
+            <h3>INTRODUCCIÓN 📊</h3>
             <p>
                 LA GESTIÓN ADMINISTRATIVA Y FINANCIERA ES LA DISCIPLINA ENCARGADA DE OPTIMIZAR LOS RECURSOS
                 HUMANOS, MATERIALES Y ECONÓMICOS DE UNA ORGANIZACIÓN. SU OBJETIVO ES GARANTIZAR LA EFICIENCIA
@@ -32,8 +36,9 @@
             </p>
         </div>
     </section>
-    
-    <section class="mensaje-valores">
+
+    <!-- Mensaje de valores -->    
+    <section class="mensaje-valores" id="card">
         <div class="contenido-mensaje">
             <h2>NO SOLO EDUCAMOS CON MATERIAS</h2>
             <p>TAMBIÉN FORMAMOS A TRAVÉS DEL DEPORTE, LA CULTURA Y LA CONVIVENCIA.
@@ -42,8 +47,8 @@
         </div>
     </section>
 
-
-    <section class="gallery-section fade">
+    <!-- Areas principales -->
+    <section class="gallery-section fade" id="areas-principales">
         <h2 class="section-title">ÁREAS PRINCIPALES DE LA FIGURA PROFESIONAL</h2>
 
         <div class="gallery">
@@ -71,9 +76,9 @@
         </div>
     </section>
 
-
-    <section class="section fade">
-        <div class="card">
+    <!-- Funciones y responsabilidades -->
+    <section class="section fade" id="funciones-responsabilidades">
+        <div class="card2">
             <h3>FUNCIONES Y RESPONSABILIDADES PRINCIPALES</h3>
 
             <ul class="styled-list">
@@ -101,8 +106,8 @@
         </div>
     </section>
 
-
-    <section class="benefits-section fade">
+    <!-- Habilidades -->
+    <section class="benefits-section-fade" id="benefits-section">
         <h2 class="section-title">HABILIDADES CLAVE DEL PROFESIONAL</h2>
 
         <div class="benefits-grid">
@@ -141,7 +146,7 @@
 
     </section>
 
-    <!-- Sección: Modulo (imagen en lugar de tablas) -->
+    <!-- Modulo -->
     <section id="curriculo" class="section curriculo-section">
         <h2 class="section-title">MÓDULO</h2>
 
@@ -151,11 +156,35 @@
 
     </section>
 
-    <footer>
-        <p>&copy; 2025 UNIDAD EDUCATIVA "LA CONCORDIA". TODOS LOS DERECHOS RESERVADOS.</p>
-    </footer>
+    <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4> UE "LA CONCORDIA"</h4>
+                    <ul>
+                        <li><a href="#hero-video">INICIO</a></li>
+                        <li><a href="#card">MENSAJE</a></li>
+                        <li><a href="#areas-principales">AREAS PRINCIPALES</a></li>
+                        <li><a href="#funciones-responsabilidades">FUNCIONES Y RESPONSABILIDADES</a></li>
+                        <li><a href="#benefits-section">HABILIDADES CLAVE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ACADÉMICO</h4>
+                    <ul>
+                        <li><a href="../html/Soporteinformatico.html">SOPORTE INFORAMATICO</li>
+                        <li><a href="../html/Gestionturistica.html">GESTIÓN TURÍSTICA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UNIDAD EDUCATIVA "LA CONCORDIA". TODOS LOS DERECHOS RESERVADOS.</p>
+            </div>
+        </footer>
 
     <script src="../java/GestionFyC/java.js"></script>
+    <script src="../java/GestionFyC/loop2.js"></script>
+
 </body>
 
 </html>

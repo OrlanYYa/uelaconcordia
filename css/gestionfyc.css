@@ -15,23 +15,36 @@ li {
     padding: 0;
 }
 
+
+/* Hero:*/
 .hero {
     height: 100vh;
-    background-image: url('../imagenes/PaginaC2.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(20, 20, 40, 0.55);
-    backdrop-filter: blur(4px);
+    background: rgba(10, 10, 20, 0.45);
+    /* quitar blur para evitar que el overlay afecte la legibilidad si se solapa */
+    backdrop-filter: none;
+    z-index: 1;
+    pointer-events: none;
+    /* permitir clicks en el contenido encima */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .hero-content {
@@ -39,9 +52,32 @@ li {
     text-align: center;
     color: white;
     animation: fadeUp 1.5s ease;
+    z-index: 3;
+    max-width: 95vw;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Video de fondo para el hero */
+.hero-video,
+#hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+    filter: brightness(0.85);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .title {
+    font-size: 4rem;
     letter-spacing: 3px;
     text-shadow: 0 0 20px #e1ebf3e8;
     animation: glow 3s infinite alternate ease-in-out;
@@ -50,57 +86,23 @@ li {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 10px rgba(107, 138, 196, 0.5));
+    filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.55));
+    /* Añadir color sólido como fallback para mejorar contraste */
+    color: rgba(255, 255, 255, 0.96);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.96);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    white-space: normal;
+    display: block;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.subtitle {
-    font-size: 1.6rem;
-    opacity: 0.9;
-    margin-top: -10px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.btn {
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: var(--text-inverse);
-    font-size: 1rem;
-    border-radius: 30px;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
-    border: 2px solid transparent;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.btn:hover::before {
-    width: 300px;
-    height: 300px;
-}
-
-.btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(107, 138, 196, 0.4);
+header h1:hover {
+    /* Usar un color de enfoque para el hover */
+    text-shadow: 0 0 15px var(--text-inverse), 0 0 5px var(--primary);
 }
 
 .section {
@@ -184,7 +186,6 @@ li {
     }
 }
 
-
 .card {
     background: var(--surface);
     padding: 30px;
@@ -221,6 +222,43 @@ li {
     font-weight: 700;
 }
 
+
+.card2 {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: var(--shadow-md);
+    transform: translateY(40px);
+    transition: all 0.5s ease;
+    border-top: 4px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.card2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.card2:hover::before {
+    left: 100%;
+}
+
+.card2 h3 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
 .fade {
     opacity: 0;
 }
@@ -230,24 +268,59 @@ li {
     transform: translateY(0);
 }
 
-footer {
-    background: var(--primary-dark);
-    color: var(--text-inverse);
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
-    border-top: 3px solid var(--primary);
-    position: relative;
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--primary) 0%, #5A7BB0 100%);
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 60px;
+    padding: 50px 20px 30px;
 }
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
 
 @keyframes fadeUp {
@@ -271,7 +344,49 @@ footer::before {
         text-shadow: 0 0 35px rgb(252, 252, 252);
     }
 }
+/* Botones estilizados */
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--text-inverse);
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    border: 2px solid transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
 
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Sección de galería */
 .section-title {
     font-size: 2.3rem;
     text-align: center;
@@ -411,6 +526,8 @@ footer::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
+    width: 80%;
+    margin: 20px auto 20px auto;
 }
 
 .benefit-card {
@@ -460,4 +577,153 @@ footer::before {
 .benefit-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 15px 35px rgba(107, 138, 196, 0.2);
+}
+
+/* --- Responsive Design para Celulares --- */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        line-height: 1.3;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    .card {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    .gallery {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        padding: 20px;
+    }
+
+    .contenido-mensaje {
+        padding: 25px;
+        margin: 0 15px;
+    }
+
+    .contenido-mensaje h2 {
+        font-size: 1.6rem;
+    }
+
+    .contenido-mensaje p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        width: 90%;
+    }
+
+    .section {
+        padding: 30px 5%;
+    }
+
+    .section-title {
+        padding: 30px ;
+        font-size: 1.4rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .gallery-card {
+        width: 100%;
+    }
+
+    .gallery-card h4 {
+        font-size: 1rem;
+    }
+
+    .gallery-card img {
+        height: 150px;
+    }
+
+    .contenido-mensaje {
+        padding: 20px;
+    }
+
+    .contenido-mensaje h2 {
+        font-size: 1.4rem;
+    }
+
+    .contenido-mensaje p {
+        font-size: 0.9rem;
+    }
 }
