@@ -4,6 +4,8 @@
    Paleta minimalista pero completa
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
 :root {
     /* ========================================
        COLORES PRINCIPALES (USO CONSTANTE)
@@ -53,6 +55,11 @@
     
     --border-light: 1px solid rgba(167, 215, 197, 0.2);
     --overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* Aplicar fuente global a todo el sitio */
+body {
+   font-family: 'Libre Baskerville', serif;
 }
 
 /* ========================================

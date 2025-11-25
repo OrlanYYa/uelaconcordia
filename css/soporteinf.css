@@ -3,22 +3,16 @@
 
 /* --- 1. Paleta de Colores y Tipografía --- */
 body {
-    font-family: 'Verdana', 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     /* Usar la variable de color principal para el texto */
     color: var(--text);
-
-    /* --- PROPIEDADES DE IMAGEN DE FONDO (Fondo suave) --- */
-    background-image: url('https://www.lahora.com.ec/__export/1742396218026/sites/lahora/img/2025/03/19/20250319_085655660_Anuncios_inesperadosx_cambian_rectores_en_centros_educativos.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
     /* Usamos el color de fondo suave */
     background-color: var(--bg);
+    
 }
+
 
 .container {
     width: 90%;
@@ -228,14 +222,28 @@ footer {
 }
 
 /* --- 8. Adaptación Móvil Sencilla --- */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
+@media (max-width:768px) {
+    body { padding: 20px }
 
-    header h1 {
-        font-size: 2em;
-    }
+    .header-content { flex-direction: column; text-align: center; gap: 16px; }
+
+    .header-logo{ width: 80px; }
+
+    .header-text { text-align: center; }
+
+    header h1 { font-size: 20px }
+
+    header p { font-size: 14px; }
+
+    .header-logo { width: 80px; }
+    .carousel-container { margin: 0; height: auto; width: auto; }
+
+    .container { width: 95%; }
+
+    /* Ajustes adicionales para secciones y galerías */
+    .gallery-card { max-width: 100%; }
+    .gallery { gap: 12px; padding: 10px 0; }
+    section { padding: 20px; }
 }
 
 /* --- 9. Animaciones CSS3 --- */

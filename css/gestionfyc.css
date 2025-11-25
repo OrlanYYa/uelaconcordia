@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-family: "Poppins", sans-serif;
     background: var(--bg);
     overflow-x: hidden;
     color: var(--text);
@@ -43,7 +42,7 @@ li {
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 100%;
     letter-spacing: 3px;
     text-shadow: 0 0 20px #e1ebf3e8;
     animation: glow 3s infinite alternate ease-in-out;
@@ -121,7 +120,7 @@ li {
 }
 
 .mensaje-valores {
-    width: 100%;
+    width:auto;
     padding: 70px 20px;
     background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
     display: flex;
@@ -365,24 +364,45 @@ footer::before {
     opacity: 0.15;
 }
 
+.styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 .styled-list li {
     margin-bottom: 12px;
     line-height: 1.5;
     font-size: 1rem;
-    padding-left: 30px;
+    padding: 12px 16px 12px 48px;
     position: relative;
     color: var(--text);
     font-weight: 500;
+    border-radius: 6px;
 }
-
 .styled-list li::before {
     content: '✓';
     position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
-    font-size: 1.2rem;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    border-radius: 50%;
+    font-size: 13px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
+
+@media (max-width: 600px) {
+    .styled-list li { padding-left: 44px; font-size: 0.98rem; }
+    .styled-list li::before { width: 20px; height: 20px; left: 10px; font-size: 11px; }
+}
+
+/* values-list removed per request */
 
 .benefits-section {
     padding: 70px 5%;

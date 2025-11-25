@@ -2,7 +2,6 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
     background: linear-gradient(180deg, var(--bg) 0%, #E8F0F7 100%);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
