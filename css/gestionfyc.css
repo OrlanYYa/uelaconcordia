@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f0f4ff;
+    overflow-x: hidden;
+    color: #0d1b3d;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('../imagenes/540741602_1220507776783277_544359268613428639_n.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 40, 0.55);
+    backdrop-filter: blur(4px);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    animation: fadeUp 1.5s ease;
+}
+
+.title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px #e1ebf3e8;
+    animation: glow 3s infinite alternate ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    opacity: 0.9;
+    margin-top: -10px;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #b9bec2c3, #98999ec3);
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    padding: 60px 5%;
+}
+
+.mensaje-valores {
+    width: 100%;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #d4eaff, #f1f6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-mensaje {
+    max-width: 700px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+.contenido-mensaje h2 {
+    font-size: 2.2rem;
+    color: #0e5aaa;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contenido-mensaje p {
+    font-size: 1.1rem;
+    color: #3a3a3a;
+    line-height: 1.7;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(40px);
+    transition: 0.5s ease;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: #10121a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 15px rgba(107, 208, 255, 0.781);
+    }
+
+    to {
+        text-shadow: 0 0 35px rgb(252, 252, 252);
+    }
+}
+
+.section-title {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0b1c44;
+}
+
+.gallery-section {
+    padding: 70px 5%;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.gallery-card {
+    width: 260px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.35s;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: grayscale(40%);
+    transition: 0.4s;
+}
+
+.gallery-card:hover img {
+    filter: grayscale(0) brightness(1.1);
+    transform: scale(1.05);
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+}
+
+.styled-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.benefits-section {
+    padding: 70px 5%;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
