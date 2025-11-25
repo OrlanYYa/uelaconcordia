@@ -1,9 +1,9 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background: #f0f4ff;
+    background: var(--bg);
     overflow-x: hidden;
-    color: #0d1b3d;
+    color: var(--text);
 }
 
 h1,
@@ -47,40 +47,83 @@ li {
     letter-spacing: 3px;
     text-shadow: 0 0 20px #e1ebf3e8;
     animation: glow 3s infinite alternate ease-in-out;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff, #e0e8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(107, 138, 196, 0.5));
 }
 
 .subtitle {
     font-size: 1.6rem;
     opacity: 0.9;
     margin-top: -10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
     margin-top: 25px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #b9bec2c3, #98999ec3);
-    color: white;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--text-inverse);
     font-size: 1rem;
     border-radius: 30px;
     text-decoration: none;
     display: inline-block;
-    transition: 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    border: 2px solid transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(107, 138, 196, 0.4);
 }
 
 .section {
     padding: 60px 5%;
+    position: relative;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
 }
 
 .mensaje-valores {
     width: 100%;
     padding: 70px 20px;
-    background: linear-gradient(135deg, #d4eaff, #f1f6ff);
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,25 +132,46 @@ li {
 
 .contenido-mensaje {
     max-width: 700px;
-    background: white;
+    background: var(--surface);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
     animation: fadeIn 1.2s ease forwards;
     opacity: 0;
+    border-left: 5px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido-mensaje::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .contenido-mensaje h2 {
     font-size: 2.2rem;
-    color: #0e5aaa;
+    color: var(--primary);
     font-weight: 700;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -1px;
 }
 
 .contenido-mensaje p {
     font-size: 1.1rem;
-    color: #3a3a3a;
+    color: var(--text);
     line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -124,14 +188,39 @@ li {
 
 
 .card {
-    background: white;
+    background: var(--surface);
     padding: 30px;
     border-radius: 20px;
     max-width: 900px;
     margin: auto;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
     transform: translateY(40px);
-    transition: 0.5s ease;
+    transition: all 0.5s ease;
+    border-top: 4px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .fade {
@@ -144,11 +233,23 @@ li {
 }
 
 footer {
-    background: #10121a;
-    color: white;
+    background: var(--primary-dark);
+    color: var(--text-inverse);
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
     margin-top: 40px;
+    border-top: 3px solid var(--primary);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
 @keyframes fadeUp {
@@ -177,7 +278,23 @@ footer {
     font-size: 2.3rem;
     text-align: center;
     margin-bottom: 40px;
-    color: #0b1c44;
+    color: var(--primary);
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
 }
 
 .gallery-section {
@@ -196,9 +313,33 @@ footer {
     text-align: center;
     border-radius: 20px;
     overflow: hidden;
-    background: white;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    transition: 0.35s;
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+    transition: all 0.35s ease;
+    position: relative;
+    border: 2px solid var(--primary-light);
+}
+
+.gallery-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 1;
+}
+
+.gallery-card h4 {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
 }
 
 .gallery-card img {
@@ -215,13 +356,32 @@ footer {
 }
 
 .gallery-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(107, 138, 196, 0.25);
+    border-color: var(--primary);
+}
+
+.gallery-card:hover::before {
+    opacity: 0.15;
 }
 
 .styled-list li {
     margin-bottom: 12px;
     line-height: 1.5;
     font-size: 1rem;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.styled-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .benefits-section {
@@ -235,14 +395,50 @@ footer {
 }
 
 .benefit-card {
-    background: white;
+    background: var(--surface);
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover::before {
+    transform: scaleX(1);
+}
+
+.benefit-card h3 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-card p {
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
 }
 
 .benefit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(107, 138, 196, 0.2);
 }

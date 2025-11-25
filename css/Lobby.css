@@ -91,7 +91,7 @@ header p {
 }
 
 .card {
-    background: var(--card-bg);
+    background: var(--surface);
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 10px 30px rgba(107, 138, 196, 0.12);
@@ -99,7 +99,7 @@ header p {
     flex-direction: column;
     gap: 14px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(167, 215, 197, 0.2);
+    border: 1px solid var(--border-light);
     position: relative;
     overflow: hidden;
 }
@@ -141,7 +141,7 @@ header p {
 }
 
 .desc {
-    color: var(--muted);
+    color: var(--text-muted);
     font-size: 14px;
     margin: 0
 }
@@ -184,15 +184,15 @@ header p {
 
 /* Color especifico de las cards */
 .c1 .badge {
-    background: var(--pink)
+    background: #E7C6D9;
 }
 
 .c2 .badge {
-    background: var(--blue)
+    background: #6B8AC4;
 }
 
 .c3 .badge {
-    background: var(--green)
+    background: #A7D7C5;
 }
 
 /* Sección: ¿Por qué elegirnos? */
@@ -225,7 +225,7 @@ header p {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(107, 138, 196, 0.1);
-    border: 1px solid rgba(167, 215, 197, 0.2);
+    border: 1px solid var(--border-light);
 }
 
 .stat-number {
@@ -238,7 +238,7 @@ header p {
 
 .stat-label {
     font-size: 14px;
-    color: var(--muted);
+    color: var(--text-muted);
     font-weight: 600;
 }
 
@@ -255,7 +255,7 @@ header p {
     text-align: center;
     box-shadow: 0 4px 15px rgba(107, 138, 196, 0.1);
     transition: all 0.3s ease;
-    border: 1px solid rgba(167, 215, 197, 0.2);
+    border: 1px solid var(--border-light);
 }
 
 .feature:hover {
@@ -304,7 +304,7 @@ header p {
 
 .feature p {
     font-size: 14px;
-    color: var(--muted);
+    color: var(--text-muted);
     margin: 0;
     line-height: 1.5;
 }
@@ -335,7 +335,7 @@ header p {
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(107, 138, 196, 0.12);
     transition: all 0.3s ease;
-    border: 1px solid rgba(167, 215, 197, 0.2);
+    border: 1px solid var(--border-light);
 }
 
 .facility-card:hover {
@@ -363,7 +363,7 @@ header p {
 
 .facility-info p {
     font-size: 14px;
-    color: var(--muted);
+    color: var(--text-muted);
     margin: 0;
     line-height: 1.5;
 }
@@ -397,7 +397,7 @@ header p {
 
 .about-text p {
     font-size: 15px;
-    color: var(--muted);
+    color: var(--text-muted);
     line-height: 1.7;
     margin: 0;
 }
@@ -488,7 +488,7 @@ li text{
 
 .testimonial-author p {
     font-size: 13px;
-    color: var(--muted);
+    color: var(--text-muted);
     margin: 0;
 }
 
@@ -542,7 +542,7 @@ li text{
 
 .info-item p {
     font-size: 15px;
-    color: var(--muted);
+    color: var(--text-muted);
     margin: 0;
     word-wrap: break-word;
 }

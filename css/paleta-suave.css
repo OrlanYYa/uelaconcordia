@@ -1,167 +1,85 @@
 /* 
    PALETA: Neutro Nórdico
-   Paleta de colores suaves, profesional y accesible diseñada para exposiciones educativas.
-   Proporciona buen contraste y no causa fatiga visual.
+   Colores profesionales, accesibles y coordinados para sitios educativos
+   Paleta minimalista pero completa
 */
 
 :root {
     /* ========================================
-       FONDOS Y SUPERFICIES
+       COLORES PRINCIPALES (USO CONSTANTE)
        ======================================== */
-    /* Fondo principal de la página */
-    --bg: #e9f1f1;
+    --primary: #6B8AC4;           /* Azul profesional - Botones, headers, títulos */
+    --primary-dark: #5A7BB0;      /* Azul oscuro - Hover, estados activos */
+    --primary-light: #E4ECFA;     /* Azul claro - Fondos suaves */
     
-    /* Superficie blanca para tarjetas, barras y contenedores */
-    --surface: #ffffff;
-    
-    /* Fondo específico de tarjetas (actualmente igual a surface) */
-    --card-bg: var(--surface);
-    
-    /* Fondo secundario para áreas de descanso visual */
-    --bg-secondary: #EEF2F7;
-    
-    /* Fondo para elementos deshabilitados o inactivos */
-    --bg-disabled: #E8E8E8;
+    --accent: #A7D7C5;            /* Verde menta - Acentos, checkmarks */
+    --accent-dark: #8BC4B0;       /* Verde menta oscuro - Hover */
+    --accent-light: #E8F5F0;      /* Verde menta claro - Fondos */
 
     /* ========================================
-       TIPOGRAFÍA Y TEXTO
+       COLORES SEMÁNTICOS (ESTADOS)
        ======================================== */
-    /* Color principal de texto - usado en párrafos, body, contenido */
-    --text: #2B3440;
-    
-    /* Texto de menor importancia - descripciones, subtítulos, etiquetas */
-    --muted: #667085;
-    
-    /* Texto muy tenue - placeholders, hints, información auxiliar */
-    --text-light: #999999;
-    
-    /* Texto sobre fondos oscuros - para contraste inverso */
-    --text-inverse: #FFFFFF;
+    --success: #4CAF50;           /* Verde - Validaciones correctas */
+    --warning: #FF9800;           /* Naranja - Alertas importantes */
+    --error: #F44336;             /* Rojo - Errores críticos */
+    --info: #2196F3;              /* Azul claro - Información adicional */
 
     /* ========================================
-       COLORES PRINCIPALES Y DE ACENTO
+       FONDOS Y SUPERFICIES (FONDOS)
        ======================================== */
-    /* Color primario - usado en header, botones, elementos destacados */
-    --primary: #6B8AC4;
-    
-    /* Color primario oscuro - para hover/active en elementos primarios */
-    --primary-dark: #5A7BB0;
-    
-    /* Color primario claro - fondos suaves, bordes tenues */
-    --primary-light: #E4ECFA;
-    
-    /* Color de acento - elementos secundarios, badges, detalles decorativos */
-    --accent: #A7D7C5;
-    
-    /* Color de acento oscuro - para hover en elementos de acento */
-    --accent-dark: #8BC4B0;
-    
-    /* Color de acento claro - fondos muy suaves para elementos de acento */
-    --accent-light: #E8F5F0;
-    
-    /* Color de enfoque - bordes cuando un elemento tiene focus (accesibilidad) */
-    --focus: #D9E9FF;
+    --bg: #e9f1f1;                /* Fondo principal de página */
+    --surface: #ffffff;           /* Blanco - Tarjetas y contenedores */
+    --bg-secondary: #EEF2F7;      /* Gris azulado - Áreas secundarias */
+    --bg-disabled: #E8E8E8;       /* Gris - Elementos deshabilitados */
 
     /* ========================================
-       COLORES SEMÁNTICOS
+       TIPOGRAFÍA Y TEXTO (COLORES DE TEXTO)
        ======================================== */
-    /* Éxito - confirmaciones, validaciones correctas, estados positivos */
-    --success: #4CAF50;
-    
-    /* Advertencia - alertas, información importante, estados de cuidado */
-    --warning: #FF9800;
-    
-    /* Error - mensajes de error, validaciones fallidas, estados críticos */
-    --error: #F44336;
-    
-    /* Información - mensajes informativos, tips, datos adicionales */
-    --info: #2196F3;
+    --text: #2B3440;              /* Texto principal - Párrafos, body */
+    --text-muted: #667085;        /* Texto secundario - Descripciones */
+    --text-light: #999999;        /* Texto tenue - Placeholders */
+    --text-inverse: #FFFFFF;      /* Texto claro - Sobre fondos oscuros */
 
     /* ========================================
-       COLORES PARA BADGES Y CATEGORÍAS
+       SOMBRAS Y BORDES (EFECTOS)
        ======================================== */
-    /* Rosa/Magenta - para badges de una categoría */
-    --pink: #E7C6D9;
-    
-    /* Azul - para badges o elementos de otra categoría */
-    --blue: #6B8AC4;
-    
-    /* Verde - para badges o elementos de una tercera categoría */
-    --green: #A7D7C5;
-    
-    /* Naranja - para destacar o una cuarta categoría */
-    --orange: #F4A261;
-    
-    /* Púrpura - para énfasis decorativo */
-    --purple: #B391A3;
-
-    /* ========================================
-       SOMBRAS Y BORDES
-       ======================================== */
-    /* Sombra sutil - elementos ligeros */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
-    
-    /* Sombra media - tarjetas y contenedores */
     --shadow-md: 0 10px 30px rgba(107, 138, 196, 0.12);
-    
-    /* Sombra grande - modales y overlays */
     --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
     
-    /* Border radius estándar - usado en tarjetas, botones */
-    --radius: 12px;
+    --radius: 12px;               /* Radio estándar */
+    --radius-sm: 6px;             /* Radio pequeño */
+    --radius-lg: 20px;            /* Radio grande */
     
-    /* Border radius pequeño - botones pequeños, badges */
-    --radius-sm: 6px;
-    
-    /* Border radius grande - elementos prominentes */
-    --radius-lg: 20px;
-
-    /* ========================================
-       TRANSPARENCIAS Y OPACIDADES
-       ======================================== */
-    /* Overlay semitransparente - para fondos de modal */
-    --overlay: rgba(0, 0, 0, 0.5);
-    
-    /* Borde tenue - separadores suaves */
     --border-light: 1px solid rgba(167, 215, 197, 0.2);
+    --overlay: rgba(0, 0, 0, 0.5);
 }
 
 /* ========================================
-   UTILIDADES RÁPIDAS
+   CLASES UTILITARIAS (Uso opcional)
    ======================================== */
-.bg-surface { 
-    background: var(--surface); 
-}
 
-.text-muted { 
-    color: var(--muted); 
-}
+/* Fondos */
+.bg-primary { background: var(--primary); }
+.bg-accent { background: var(--accent); }
+.bg-surface { background: var(--surface); }
+.bg-secondary { background: var(--bg-secondary); }
 
-.focus-ring { 
-    outline: 3px solid var(--focus); 
-    outline-offset: 2px; 
-}
+/* Textos */
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--text-muted); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-error { color: var(--error); }
+.text-info { color: var(--info); }
 
-.text-primary {
-    color: var(--primary);
-}
+/* Sombras */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
 
-.text-success {
-    color: var(--success);
-}
-
-.text-warning {
-    color: var(--warning);
-}
-
-.text-error {
-    color: var(--error);
-}
-
-.bg-primary {
-    background: var(--primary);
-}
-
-.bg-accent {
-    background: var(--accent);
-}
+/* Bordes redondeados */
+.rounded { border-radius: var(--radius); }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-lg { border-radius: var(--radius-lg); }
