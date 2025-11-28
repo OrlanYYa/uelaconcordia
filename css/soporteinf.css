@@ -1,6 +1,4 @@
-/* Importar la paleta de colores suaves */
 @import "paleta-suave.css";
-
 /* --- 1. Paleta de Colores y Tipografía --- */
 body {
     line-height: 1.6;
@@ -188,35 +186,13 @@ section:hover {
     /* Sombra grande al hacer hover */
 }
 
-/* --- 6. Listas de Puntos (Legibilidad) --- */
-ul {
-    list-style: none;
-    padding: 0;
+footer li {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-li {
-    /* Usar bg-secondary para el fondo de la lista */
-    background-color: var(--bg-secondary);
-    margin-bottom: 10px;
-    padding: 15px 20px;
-    /* Usar el color primario para la barra lateral */
-    border-left: 8px solid var(--primary);
-    border-radius: var(--radius-sm);
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-li:hover {
-    /* Usar primary-light para el cambio de color al pasar el mouse */
-    background-color: var(--primary-light);
-}
-
-/* Excepción: no aplicar estilos li/ul/a al footer */
-.footer-section ul,
-.footer-section li,
-.footer-section a {
-    all: revert;
-}
 
 li strong {
     /* Usar el color primario para el texto fuerte */
@@ -227,9 +203,8 @@ li strong {
 /* Botón reutilizable similar a Gestión Financiera */
 .btn {
     display: inline-block;
-    margin-top: 18px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: var(--success);
     color: var(--text-inverse);
     font-size: 1rem;
     border-radius: 30px;
@@ -261,6 +236,11 @@ li strong {
 .btn:hover {
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Footer */
+div {
+    text-align: justify;
 }
 
 /* Footer */
@@ -406,8 +386,6 @@ li strong {
     ul li {
         padding: 12px 15px;
         font-size: 0.95rem;
-        border-left: 6px solid var(--primary);
-        box-sizing: border-box;
     }
 
     img {
@@ -486,7 +464,6 @@ li strong {
     ul li {
         padding: 10px 12px;
         font-size: 0.9rem;
-        box-sizing: border-box;
     }
 
     .btn {

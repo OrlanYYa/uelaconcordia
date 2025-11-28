@@ -1,0 +1,341 @@
+/* Importar la paleta de colores suaves */
+@import "paleta-suave.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fondo de hojas de gestiontur.css (MANTENIDO) */
+    background-image: url("../imagenes/hojas pj.webp");
+    background-size: 1800px;
+    background-position: center 680px;
+
+    /* Conexión a la paleta */
+    background-color: var(--bg, #f5f5f5);
+    color: var(--text, #333333);
+    font-family: var(--font-primary);
+}
+
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    padding-bottom: 5px;
+    /* Color original: #bfd8b1 (Verde claro) -> var(--accent-dark) o var(--accent) */
+    color: var(--accent-dark, #8BC4B0);
+}
+
+div {
+    text-align: justify;
+}
+
+/* ========================================
+   CARRUSEL DE IMÁGENES - PRESENTACIÓN
+   ======================================== */
+.swiper2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.swiper-container2 {
+    height: 400px;
+}
+
+.swiper-slide2 {
+    /* Definimos el estilo de la diapositiva individual */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    /* Altura de la diapositiva, puedes ajustarla */
+    box-shadow: 0 10px 30px rgba(28, 30, 32, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.swiper-slide2 img {
+    /* Estilo para la imagen dentro de la diapositiva */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.swiper-slide2-active {
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 15px 40px rgba(107, 138, 196, 0.3);
+}
+
+/* Opcional: Estilo de los puntos de paginación de Swiper */
+.swiper-pagination2-bullet-active {
+    background: var(--primary) !important;
+}
+
+.swiper-button-next2,
+.swiper-button-prev2 {
+    /* Usamos un estilo similar a tus .carousel-btn para que se vean bien */
+    color: white;
+    /* Color del icono */
+    background: rgba(107, 138, 196, 0.7);
+    border-radius: 50%;
+    /* Lo hacemos redondo */
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.swiper-button-next2::after,
+.swiper-button-prev2::after {
+    font-size: 20px;
+    /* Tamaño del icono */
+    font-weight: bold;
+}
+
+.swiper-button-next2:hover,
+.swiper-button-prev2:hover {
+    background: rgba(107, 138, 196, 0.95);
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+div ul {
+    margin-left: 20px;
+}
+
+header#super {
+    position: relative;
+    min-height: 100vh;
+    /* OCUPA TODA LA PANTALLA */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    /* Color original: #fff (Blanco) -> var(--text-inverse) */
+    color: var(--text-inverse, white);
+    overflow: hidden;
+}
+
+
+/* VIDEO DE FONDO */
+#vf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(40%);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --- NUEVA ESTRUCTURA DE CUADRÍCULA (2x2) --- */
+
+.content-grid {
+    /* Propiedad display: grid debe estar en el HTML o en un archivo adicional */
+    gap: 40px;
+    /* Padding exterior para separar del borde de la pantalla */
+    padding: 40px 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Títulos de las cajas (#tca) */
+#tca {
+    font-size: 25px;
+    margin-bottom: 20px;
+    /* Color original: rgb(16, 114, 114) (Verde/Cian oscuro) -> var(--primary-dark) */
+    color: var(--primary-dark, #5A7BB0);
+}
+
+/* Estilo para TODOS los recuadros de información */
+.grid-box {
+    /* Color original: white (Blanco) -> var(--surface) */
+    background-color: var(--surface, white);
+    padding: 25px;
+    margin-top: 50px;
+    /* Borde redondeado de gestión tur */
+    border-radius: 10px;
+    /* Sombra de gestión tur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+
+    /* Opcional: añade un borde sutil con un color de la paleta */
+    border-left: 3px solid var(--accent, #A7D7C5);
+}
+
+/* Estilos de las antiguas clases de bloques (mantengo por si acaso, 
+   pero el estilo principal es manejado por .grid-box) */
+.b1t,
+.b1b,
+.b2t,
+.b3t {
+    /* No se aplican márgenes individuales, ya que el 'gap' del grid se encarga del espaciado */
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--primary) 0%, #5A7BB0 100%);
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 60px;
+    padding: 50px 20px 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Botones estilizados */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--success);
+    color: var(--text-inverse);
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    border: 2px solid transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* RESPONSIVE (Mantenido el original) */
+@media screen and (max-width: 1050px) {
+    .content-grid {
+        /* Reduce el padding en pantallas más pequeñas */
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* Aumenta el margen de la imagen en dispositivos más pequeños */
+    .content-grid div img {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #lin {
+        display: none;
+        /* Oculta la línea divisoria vertical en móvil */
+    }
+
+    .content-grid {
+        padding: 20px 20px;
+    }
+
+    header#super {
+        padding-left: 20px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        width: auto;
+    }
+}

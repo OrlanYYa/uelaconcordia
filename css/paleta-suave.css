@@ -57,9 +57,10 @@
     --overlay: rgba(0, 0, 0, 0.5);
 }
 
+
 /* Aplicar fuente global a todo el sitio */
 body {
-   font-family: 'Libre Baskerville', serif;
+   font-family: 'Libre Baskerville';
 }
 
 /* Reglas responsivas globales */
