@@ -13,7 +13,6 @@ body {
     box-sizing: border-box;
 }
 
-
 .container {
     width: 90%;
     max-width: 1000px;
@@ -26,6 +25,21 @@ header h1 {
     font-size: 3em;
     letter-spacing: 3px;
     transition: text-shadow 0.5s ease;
+}
+
+#gf {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+}
+
+#gf:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
 /* Hero: diseño consistente con Gestión Financiera */
@@ -139,7 +153,7 @@ h2:hover {
 }
 
 /* --- 4. Regla IMG Centrada y responsive --- */
-img {
+img#png {
     max-width: 100%;
     width: 600px;
     height: auto;

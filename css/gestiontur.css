@@ -9,7 +9,7 @@
 
 body {
     /* Fondo de hojas de gestiontur.css (MANTENIDO) */
-    background-image: url("../imagenes/hojas pj.webp");
+    background-image: url("../imagenes/hojaspj.webp");
     background-size: 1800px;
     background-position: center 680px;
 
@@ -38,17 +38,17 @@ div {
 /* ========================================
    CARRUSEL DE IMÁGENES - PRESENTACIÓN
    ======================================== */
-.swiper2 {
+.swiper {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 40px;
 }
 
-.swiper-container2 {
+.swiper-container {
     height: 400px;
 }
 
-.swiper-slide2 {
+.swiper-slide {
     /* Definimos el estilo de la diapositiva individual */
     background-position: center;
     background-size: cover;
@@ -63,7 +63,7 @@ div {
     transition: transform 0.4s ease;
 }
 
-.swiper-slide2 img {
+.swiper-slide img {
     /* Estilo para la imagen dentro de la diapositiva */
     display: block;
     width: 100%;
@@ -72,19 +72,19 @@ div {
     border-radius: 20px;
 }
 
-.swiper-slide2-active {
+.swiper-slide-active {
     transform: scale(1.1);
     z-index: 10;
     box-shadow: 0 15px 40px rgba(107, 138, 196, 0.3);
 }
 
 /* Opcional: Estilo de los puntos de paginación de Swiper */
-.swiper-pagination2-bullet-active {
+.swiper-pagination-bullet-active {
     background: var(--primary) !important;
 }
 
-.swiper-button-next2,
-.swiper-button-prev2 {
+.swiper-button-next,
+.swiper-button-prev {
     /* Usamos un estilo similar a tus .carousel-btn para que se vean bien */
     color: white;
     /* Color del icono */
@@ -98,23 +98,16 @@ div {
     padding: 0;
 }
 
-.swiper-button-next2::after,
-.swiper-button-prev2::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
     font-size: 20px;
     /* Tamaño del icono */
     font-weight: bold;
 }
 
-.swiper-button-next2:hover,
-.swiper-button-prev2:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     background: rgba(107, 138, 196, 0.95);
-}
-
-.footer-section ul li a {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 div ul {
@@ -159,7 +152,6 @@ header#super {
 }
 
 /* --- NUEVA ESTRUCTURA DE CUADRÍCULA (2x2) --- */
-
 .content-grid {
     /* Propiedad display: grid debe estar en el HTML o en un archivo adicional */
     gap: 40px;
@@ -169,8 +161,32 @@ header#super {
     margin: 0 auto;
 }
 
+/* video promoción */
+#gf {
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+    left: 25%;
+}
+
+#gf:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#gf p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text, #333333);
+}
+
 /* Títulos de las cajas (#tca) */
-#tca {
+#tca, #tca2, #tca3, #tca4, #tca5 {
     font-size: 25px;
     margin-bottom: 20px;
     /* Color original: rgb(16, 114, 114) (Verde/Cian oscuro) -> var(--primary-dark) */
@@ -191,15 +207,6 @@ header#super {
 
     /* Opcional: añade un borde sutil con un color de la paleta */
     border-left: 3px solid var(--accent, #A7D7C5);
-}
-
-/* Estilos de las antiguas clases de bloques (mantengo por si acaso, 
-   pero el estilo principal es manejado por .grid-box) */
-.b1t,
-.b1b,
-.b2t,
-.b3t {
-    /* No se aplican márgenes individuales, ya que el 'gap' del grid se encarga del espaciado */
 }
 
 /* Footer */

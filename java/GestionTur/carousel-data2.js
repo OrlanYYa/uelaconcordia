@@ -1,13 +1,22 @@
 // 1. Array con los datos de las imágenes
 const carouselImages = [
   { src: "../imagenes/imagencartur/1.jfif" },
+  { src: "../imagenes/imagencartur/2.jfif" },
+  { src: "../imagenes/imagencartur/3.jfif" },
+  { src: "../imagenes/imagencartur/4.jfif" },
+  { src: "../imagenes/imagencartur/5.jfif" },
+  { src: "../imagenes/imagencartur/6.jfif" },
+  { src: "../imagenes/imagencartur/7.jfif" },
+  { src: "../imagenes/imagencartur/8.jfif" },
+  { src: "../imagenes/imagencartur/9.jfif" },
+  { src: "../imagenes/imagencartur/10.jfif" },
 ];
 
 // 2. Función para generar el HTML de las diapositivas
 function generateSlides() {
-  const swiperWrapper2 = document.querySelector(".swiper-wrapper2");
-  if (!swiperWrapper2) {
-    console.error("El elemento .swiper-wrapper2 no fue encontrado.");
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+  if (!swiperWrapper) {
+    console.error("El elemento .swiper-wrapper no fue encontrado.");
     return;
   }
 
@@ -15,20 +24,20 @@ function generateSlides() {
   carouselImages.forEach((image) => {
     // Creamos cada slide con la clase 'swiper-slide'
     slidesHTML += `
-                <div class="swiper-slide2">
+                <div class="swiper-slide">
                     <img src="${image.src}" alt="${image.alt}">
                 </div>
             `;
   });
 
-  swiperWrapper2.innerHTML = slidesHTML;
+  swiperWrapper.innerHTML = slidesHTML;
 }
 
 // 3. Ejecutar la función y luego inicializar Swiper
 generateSlides();
 
 // 4. Inicialización de Swiper
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1, // Se ajusta a 1 para móviles
   spaceBetween: 20,
   grabCursor: true,
@@ -40,14 +49,14 @@ var swiper2 = new Swiper(".mySwiper2", {
     disableOnInteraction: false,
   },
   // Configuración de paginación y navegación
-  pagination: { // <-- CORRECCIÓN: Usar 'pagination' en lugar de 'pagination2'
-    el: ".swiper-pagination2",
+  pagination: {
+    el: ".swiper-pagination",
     clickable: true,
   },
 
-  navigation: { // <-- CORRECCIÓN: Usar 'navigation' en lugar de 'navigation2'
-    nextEl: ".swiper-button-next2",
-    prevEl: ".swiper-button-prev2",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   // Breakpoints para hacerlo responsivo
   breakpoints: {
