@@ -2,9 +2,9 @@
 const carouselImages = [
     //Autoridades y departamentos
     { src: "../imagenes/imagenescarrusel/Directora.jpg" },
-    { src: "../imagenes/imagenescarrusel/" },
-    { src: "../imagenes/imagenescarrusel/" },
-    { src: "../imagenes/imagenescarrusel/" },
+    { src: "../imagenes/imagenescarrusel/Rectora.jpg" },
+    { src: "../imagenes/imagenescarrusel/Inspector.jpg" },
+    { src: "../imagenes/imagenescarrusel/Secretaria.jpg" },
     //Docentes de Area
     { src: "../imagenes/imagenescarrusel/DocentesTecnicos.jpg" },
     //Docentes
