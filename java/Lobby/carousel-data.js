@@ -11,10 +11,11 @@ const carouselImages = [
     { src: "../imagenes/imagenescarrusel/Profesoras.jpg" },
     { src: "../imagenes/imagenescarrusel/Profesores.jpg" },
     //Colaboraciones
-    { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
     { src: "../imagenes/imagenescarrusel/Colaboraciones1.jpg" },
     { src: "../imagenes/imagenescarrusel/colaboraciones2.jpg" },
     { src: "../imagenes/imagenescarrusel/Colaboraciones3.jpg" },
+    { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
+
     //Estudiantes
     { src: "../imagenes/imagenescarrusel/Estudiantes.jpg" },
     { src: "../imagenes/imagenescarrusel/Estudiantes1.jpg" },
