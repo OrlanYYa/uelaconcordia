@@ -8,6 +8,7 @@ const carouselImages = [
     //Docentes de Area
     { src: "../imagenes/imagenescarrusel/DocentesTecnicos.jpg" },
     //Docentes
+    { src: "../imagenes/imagenescarrusel/PlantelInstitucional.jfif" },
     { src: "../imagenes/imagenescarrusel/Profesoras.jpg" },
     { src: "../imagenes/imagenescarrusel/Profesores.jpg" },
     //Colaboraciones
