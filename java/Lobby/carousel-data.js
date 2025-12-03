@@ -1,6 +1,15 @@
 // 1. Array con los datos de las imágenes
 const carouselImages = [
-    { src: "../imagenes/imagenescarrusel/Autoridad principal.jpg" },
+    //Autoridades y departamentos
+    { src: "../imagenes/imagenescarrusel/Directora.jpg" },
+    { src: "../imagenes/imagenescarrusel/" },
+    { src: "../imagenes/imagenescarrusel/" },
+    { src: "../imagenes/imagenescarrusel/" },
+    //Docentes de Area
+    { src: "../imagenes/imagenescarrusel/DocentesTecnicos.jpg" },
+    //Docentes
+    { src: "../imagenes/imagenescarrusel/Profesoras.jpg" },
+    { src: "../imagenes/imagenescarrusel/Profesores.jpg" },
     //Colaboraciones
     { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
     { src: "../imagenes/imagenescarrusel/Colaboraciones1.jpg" },
@@ -17,9 +26,6 @@ const carouselImages = [
     { src: "../imagenes/imagenescarrusel/Eventos3.jpg" },
     { src: "../imagenes/imagenescarrusel/Eventos4.jpg" },
     { src: "../imagenes/imagenescarrusel/Eventos5.jpg" },
-    //Docentes
-    { src: "../imagenes/imagenescarrusel/Profesoras.jpg" },
-    { src: "../imagenes/imagenescarrusel/Profesores.jpg" },
 ];
 
 // 2. Función para generar el HTML de las diapositivas
