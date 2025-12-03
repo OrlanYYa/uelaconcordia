@@ -13,14 +13,15 @@ const carouselImages = [
     //Colaboraciones
     { src: "../imagenes/imagenescarrusel/Colaboraciones1.jpg" },
     { src: "../imagenes/imagenescarrusel/colaboraciones2.jpg" },
-    { src: "../imagenes/imagenescarrusel/Colaboraciones3.jpg" },
-    { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
 
     //Estudiantes
     { src: "../imagenes/imagenescarrusel/Estudiantes.jpg" },
-    { src: "../imagenes/imagenescarrusel/Estudiantes1.jpg" },
     { src: "../imagenes/imagenescarrusel/Estudiantes2.jfif" },
+
     //Eventos
+    { src: "../imagenes/imagenescarrusel/Colaboraciones.jpg" },
+    { src: "../imagenes/imagenescarrusel/Colaboraciones3.jpg" },
+    { src: "../imagenes/imagenescarrusel/Estudiantes1.jpg" },
     { src: "../imagenes/imagenescarrusel/Eventos.jpg" },
     { src: "../imagenes/imagenescarrusel/Eventos1.jpg" },
     { src: "../imagenes/imagenescarrusel/Eventos2.jpg" },
