@@ -31,10 +31,6 @@ h2 {
     color: var(--accent-dark, #8BC4B0);
 }
 
-div {
-    text-align: justify;
-}
-
 /* ========================================
    CARRUSEL DE IMÁGENES - PRESENTACIÓN
    ======================================== */
