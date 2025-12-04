@@ -58,7 +58,7 @@ function generateSlides() {
     // 4. Inicialización de Swiper 
     var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1, // Se ajusta a 1 para móviles
-    spaceBetween: 20,
+    spaceBetween: 10,
     grabCursor: true,
     loop: true,
     centeredSlides: true,
