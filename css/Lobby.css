@@ -184,6 +184,48 @@ header p {
     font-weight: 600
 }
 
+/* Sección: Jornadas */
+.jornadas {
+    margin-top: 60px;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, rgba(167, 215, 197, 0.08) 0%, rgba(107, 138, 196, 0.08) 100%);
+    border-radius: 16px;
+}
+
+.jornadas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.jornada-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(107, 138, 196, 0.12);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.jornada-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(107, 138, 196, 0.2);
+}
+
+.jornada-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 12px 0;
+}
+
+.jornada-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* Color especifico de las cards */
 .c1 .badge {
     background: #E7C6D9;
